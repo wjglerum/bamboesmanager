@@ -4,30 +4,30 @@ version := "0.6.0-SNAPSHOT"
 
 lazy val `bamboesmanager` = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.13.13"
+scalaVersion := "2.13.16"
 
 libraryDependencies ++= Seq(
   ehcache, ws, specs2 % Test, evolutions, filters, guice,
   "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.1" % Test,
-  "org.playframework" %% "play-slick" % "6.1.0",
-  "org.playframework" %% "play-slick-evolutions" % "6.1.0",
+  "org.playframework" %% "play-slick" % "6.1.1",
+  "org.playframework" %% "play-slick-evolutions" % "6.1.1",
   "org.playframework" %% "play-json" % "3.0.4",
-  "org.playframework" %% "play-mailer" % "10.0.0",
-  "org.playframework" %% "play-mailer-guice" % "10.0.0",
-  "com.h2database" % "h2" % "2.2.224",
-  "org.postgresql" % "postgresql" % "42.7.3",
-  "org.webjars" %% "webjars-play" % "3.0.1",
+  "org.playframework" %% "play-mailer" % "10.1.0",
+  "org.playframework" %% "play-mailer-guice" % "10.1.0",
+  "com.h2database" % "h2" % "2.3.232",
+  "org.postgresql" % "postgresql" % "42.7.5",
+  "org.webjars" %% "webjars-play" % "3.0.2",
   "org.webjars" % "bootstrap" % "3.4.1" exclude("org.webjars", "jquery"),
   "org.webjars" % "bootstrap-table" % "1.16.0" exclude("org.webjars", "jquery"),
   "org.webjars" % "bootstrap-switch" % "3.3.4" exclude("org.webjars", "jquery"),
   "org.webjars.bower" % "tableExport.jquery.plugin" % "1.9.3" exclude("org.webjars.bower", "jquery") exclude("org.webjars.bower", "jspdf") exclude("org.webjars.bower", "jspdf-autotable") exclude("org.webjars.bower", "file-saver.js") exclude("org.webjars.bower", "html2canvas"),
   "org.webjars" % "jquery" % "1.12.4",
   "com.adrianhurt" %% "play-bootstrap" % "1.6.1-P28-B3" exclude("org.webjars", "bootstrap") exclude("org.webjars", "jquery"),
-  "org.playframework.silhouette" %% "play-silhouette" % "10.0.0",
-  "org.playframework.silhouette" %% "play-silhouette-persistence" % "10.0.0",
-  "org.playframework.silhouette" %% "play-silhouette-crypto-jca" % "10.0.0",
-  "org.playframework.silhouette" %% "play-silhouette-password-bcrypt" % "10.0.0",
-  "org.playframework.silhouette" %% "play-silhouette-testkit" % "10.0.0" % "test",
+  "org.playframework.silhouette" %% "play-silhouette" % "10.0.1",
+  "org.playframework.silhouette" %% "play-silhouette-persistence" % "10.0.1",
+  "org.playframework.silhouette" %% "play-silhouette-crypto-jca" % "10.0.1",
+  "org.playframework.silhouette" %% "play-silhouette-password-bcrypt" % "10.0.1",
+  "org.playframework.silhouette" %% "play-silhouette-testkit" % "10.0.1" % "test",
   "net.codingwell" %% "scala-guice" % "6.0.0",
   "com.iheart" %% "ficus" % "1.5.2",
 )
@@ -42,8 +42,6 @@ scalacOptions ++= Seq(
   "-Ywarn-value-discard",
   "-Werror",
   "-Xlint",
-  "-Xlint:-multiarg-infix",
-  "-Xlint:-named-booleans",
 )
 
 // https://stackoverflow.com/questions/37413032/ywarn-unused-import-triggering-on-play-routes-file
